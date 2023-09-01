@@ -1,6 +1,6 @@
 import React, {useEffect,useState} from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { Row,Col, Image, ListGroup, Button, Card, ListGroupItem } from 'react-bootstrap'
+import { Row,Col, Image, ListGroup, Button, Card} from 'react-bootstrap'
 import Rating from '../components/Rating'
 import axios from 'axios'
 
@@ -72,7 +72,7 @@ function ProductScreen({match}) {
                             </ListGroup.Item>
 
                             <ListGroup.Item>
-                                <Button className="btn-block" disabled={product.countInStock == 0} type='button' >Add to Cart</Button>
+                                <Button className="btn-block" disabled={product.countInStock === 0} type='button' >Add to Cart</Button>
                             </ListGroup.Item>
                         </ListGroup>
                     </Card>
