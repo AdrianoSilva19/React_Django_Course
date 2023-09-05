@@ -18,10 +18,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-o1uq-zf*pt_$@kyna1qig6&*g#6z$1g&x$w03cf&ksw_)l=tgj"
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -124,7 +120,10 @@ MEDIA_URL = "/images/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 
 MEDIA_ROOT = "static/images"
-
+DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+AWS_ACCESS_KEY_ID = "AKIAWKPDRVDI7AZSJ2GC"
+AWS_SECRET_ACCESS_KEY = "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"
+AWS_STORAGE_BUCKET_NAME = "lipidgema"
 CORS_ALLOW_ALL_ORIGINS = True
 
 # Default primary key field type
